@@ -1,0 +1,7 @@
+/* navigation */
+let navToggle = document.querySelector(".humberger__button_toggle--container");
+let button__open = document.querySelector(".button__open");
+let primary__navigation = document.querySelector(".primary__navigation");
+let button__close = document.querySelector(".button__close");
+let primary__header = document.querySelector(".primary__header");
+navToggle.addEventListener("click", () => {});
