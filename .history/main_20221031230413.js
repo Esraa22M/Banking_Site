@@ -25,26 +25,3 @@ navToggle.addEventListener("click", () => {
   primary__header.toggleAttribute("overlay");
   primary__navigation_list.classList.toggle("hidden-sm");
 });
-
-/* model window handling */
-let modal = document.querySelector(".modal");
-let close_modal = document.querySelector(".modal__close--button");
-let open_modal = document.querySelector(".register__button");
-let overlay = document.querySelector(".overlay");
-
-/*handle open modal */
-let openModal = (e) => {
-  console.log(e);
-  e.preventDefault();
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-};
-open_modal.addEventListener("click", openModal);
-
-/*handle close modal */
-let closeModal = (e) => {
-  e.preventDefault();
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
-close_modal.addEventListener("click", closeModal);

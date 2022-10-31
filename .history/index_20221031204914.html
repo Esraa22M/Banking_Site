@@ -20,11 +20,11 @@
             <button class="humberger__button_toggle--container" aria-expanded="false"
                 aria-controls="controls the navigation menu's open and closing">
                 <span class="sr-only">Nagivation menu</span>
-                <span class="button__close hidden-sm" aria-hidden="true">x</span>
+                <span class="button__close hidden" aria-hidden="true">x</span>
                 <span class="button__open" aria-hidden="true"></span>
             </button>
             <nav class="primary__navigation">
-                <ul role="list" class="primary__navigation--list hidden-sm">
+                <ul role="list" class="primary__navigation--list hidden">
                     <li class="primary__navigation-item">
                         <a href="#section__1" class="primary__navigation-link">processes</a>
                     </li>
@@ -41,10 +41,8 @@
         </div>
     </header>
     <main>
-        <section class="modal container hidden">
-            <button class="modal__close--button">
-                <span>&times;</span>
-            </button>
+        <section class="modal container">
+            <button class="modal__close--button"><span>X</span></button>
             <h2 class="modal--header">Open your bank account</h2>
             <form class="create__account--form">
                 <figure class="form__logo--wrapper">
@@ -60,9 +58,7 @@
                 <div class="email--wrapper"><label for=" email" class="sr-only">Email:</label>
                     <input type="email" class="email" placeholder="Enter your Email" />
                 </div>
-                <div class="create_account--button__wrapper">
-                    <button type="submit" class="register__button create_account--button">Next Step &rarr;</button>
-                </div>
+                <button type="submit" class="register__button create_account--button">Next Step</button>
             </form>
         </section>
         <div class="overlay hidden"></div>

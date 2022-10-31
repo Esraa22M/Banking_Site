@@ -36,15 +36,7 @@ let overlay = document.querySelector(".overlay");
 let openModal = (e) => {
   console.log(e);
   e.preventDefault();
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
+  modal.classList.remove(".hidden");
+  overlay.classList.remove(".hidden");
 };
 open_modal.addEventListener("click", openModal);
-
-/*handle close modal */
-let closeModal = (e) => {
-  e.preventDefault();
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
-close_modal.addEventListener("click", closeModal);

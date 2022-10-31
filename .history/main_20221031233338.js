@@ -47,4 +47,3 @@ let closeModal = (e) => {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
-close_modal.addEventListener("click", closeModal);

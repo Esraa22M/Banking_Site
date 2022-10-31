@@ -96,7 +96,7 @@ body {
   font-size: var(--fs-nav);
   line-height: 1.4rem;
   position: relative;
-  z-index: 2000;
+  z-index: 10;
 }
 .primary__navigation--list {
   display: flex;
@@ -204,8 +204,7 @@ body {
   background-color: white;
   border: 1px solid var(--clr-neutral-900);
   border-radius: 4px;
-  transform-origin: top;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
 }
 .modal--header {
   font-size: var(--fs-primary-heading);
@@ -279,11 +278,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   z-index: 100;
-  transform-origin: top;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
 }
 /* utility class */
-.hidden {
+*/ .hidden {
   opacity: 0;
   transform: scale(1, 0);
 }

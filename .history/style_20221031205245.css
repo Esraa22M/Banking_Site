@@ -96,7 +96,6 @@ body {
   font-size: var(--fs-nav);
   line-height: 1.4rem;
   position: relative;
-  z-index: 2000;
 }
 .primary__navigation--list {
   display: flex;
@@ -185,32 +184,18 @@ body {
   position: absolute;
   inset: 0;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
 }
 
 /*popup modal style */
 .modal {
-  position: fixed;
-  top: 50%;
   display: grid;
-  z-index: 1000;
   align-items: center;
   justify-content: center;
   padding: 3em 0;
   margin-top: 2em;
   position: relative;
-  max-width: 25em;
-  background-color: white;
-  border: 1px solid var(--clr-neutral-900);
-  border-radius: 4px;
-  transform-origin: top;
-  transition: all 0.5s ease-in-out;
-}
-.modal--header {
-  font-size: var(--fs-primary-heading);
-  text-transform: capitalize;
-  text-align: center;
 }
 .create__account--form {
   background-color: white;
@@ -253,39 +238,17 @@ body {
 .email--wrapper:focus-within .email {
   border: none;
 }
-.create_account--button__wrapper {
-  text-align: center;
-}
 .create_account--button {
   margin-top: 1em;
 }
-
+.modal--header {
+  font-size: var(--fs-primary-heading);
+  text-transform: capitalize;
+  text-align: center;
+}
 .modal__close--button {
   border: none;
   outline: none;
-  position: absolute;
-  background-color: transparent;
-  font-size: var(--fs-800);
-  top: 0;
-  right: 1em;
-  line-height: 1.5;
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
-  z-index: 100;
-  transform-origin: top;
-  transition: all 0.5s ease-in-out;
-}
-/* utility class */
-.hidden {
-  opacity: 0;
-  transform: scale(1, 0);
 }
 /* media query for mobile screen */
 @media (max-width: 40em) {
@@ -302,6 +265,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: white;
+    border: 1px solid var(--clr-accent-400);
     box-shadow: 0 0 1px 1px var(--clr-accent-100);
     align-items: center;
     transform-origin: top;
@@ -312,15 +276,9 @@ body {
     margin-right: min(3em, 12%);
   }
   /* utility class */
-  .hidden-sm {
+  .hidden {
     opacity: 0;
     transform: scale(1, 0);
-  }
-  .modal__close--button {
-    top: 0;
-    right: 0.5em;
-    font-size: var(--fs-secondary-heading);
-    line-height: 1.5;
   }
 }
 @media (min-width: 40em) {
@@ -341,8 +299,4 @@ body {
     max-width: 15ch;
     margin: auto;
   }
-  /* .modal__close--button {
-    top: 1em;
-    right: 2em;
-  } */
 }

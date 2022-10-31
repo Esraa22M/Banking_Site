@@ -204,7 +204,6 @@ body {
   background-color: white;
   border: 1px solid var(--clr-neutral-900);
   border-radius: 4px;
-  transform-origin: top;
   transition: all 0.5s ease-in-out;
 }
 .modal--header {
