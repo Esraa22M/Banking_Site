@@ -66,8 +66,6 @@ body {
   line-height: 1.5;
   font-size: var(--fs-body);
   z-index: 10;
-  color: var(--clr-neutral-100);
-  font-size: var(--fs-body);
 }
 /* utility classes */
 .sr-only {
@@ -111,7 +109,7 @@ body {
 }
 .primary__navigation-link {
   text-transform: uppercase;
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
   font-weight: var(--fw-regular);
 }
 .primary__navigation-link:hover,
@@ -184,25 +182,24 @@ body {
 
 .primary__header[overlay]::before {
   content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: absolute;
+  inset: 0;
   height: 100%;
+  z-index: 1;
   background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
-  z-index: 100;
 }
 
 /*popup modal style */
 .modal {
-  top: 25%;
-  left: calc((100% - 25em) / 2);
-  position: absolute;
+  position: fixed;
+  top: 50%;
   display: grid;
   z-index: 1000;
   align-items: center;
   justify-content: center;
   padding: 3em 0;
+  margin-top: 2em;
+  position: relative;
   max-width: 25em;
   background-color: white;
   border: 1px solid var(--clr-neutral-900);
@@ -269,15 +266,9 @@ body {
   position: absolute;
   background-color: transparent;
   font-size: var(--fs-800);
-  cursor: pointer;
-  top: 0.5em;
+  top: 0;
   right: 1em;
-  padding: 0 0.5em;
-}
-.modal__close--button:hover,
-.modal__close--button:active,
-.modal__close--button:focus {
-  border: 1px solid var(--clr-neutral-900);
+  line-height: 1.5;
 }
 .overlay {
   position: fixed;
@@ -298,17 +289,16 @@ body {
 }
 .even-columns {
   display: grid;
-  grid-auto-flow: row;
-  gap: 1.5em;
+  grid-auto-flow: column;
+  gap: 4em;
 }
 /* intro section */
 .Intro {
   margin-top: 3em;
-  align-items: center;
 }
 
 .intro__image {
-  width: 100%;
+  width: min(25em, 100%);
   justify-self: center;
 }
 .intro__image--wrapper::after {
@@ -320,12 +310,6 @@ body {
 .intro__header {
   font-size: var(--fs-primary-heading);
   font-weight: var(--fw-bold);
-  color: var(--clr-primary-400);
-}
-.intro__sub--header {
-  opacity: 0.7;
-  font-size: var(--fs-body);
-  margin-top: 0.5em;
 }
 /* media query for mobile screen */
 
@@ -380,11 +364,10 @@ body {
   /* modal style */
   .modal--header {
     max-width: 15ch;
-    margin: 0.4em auto;
+    margin: auto;
   }
-
-  .even-columns {
-    grid-auto-flow: column;
-    gap: 2.5em;
-  }
+  /* .modal__close--button {
+    top: 1em;
+    right: 2em;
+  } */
 }

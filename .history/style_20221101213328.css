@@ -299,7 +299,6 @@ body {
 .even-columns {
   display: grid;
   grid-auto-flow: row;
-  gap: 1.5em;
 }
 /* intro section */
 .Intro {

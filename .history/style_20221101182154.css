@@ -195,14 +195,14 @@ body {
 
 /*popup modal style */
 .modal {
-  top: 25%;
-  left: calc((100% - 25em) / 2);
-  position: absolute;
+  position: fixed;
   display: grid;
   z-index: 1000;
   align-items: center;
   justify-content: center;
   padding: 3em 0;
+  /* margin-top: 2em; */
+  position: relative;
   max-width: 25em;
   background-color: white;
   border: 1px solid var(--clr-neutral-900);
@@ -269,15 +269,9 @@ body {
   position: absolute;
   background-color: transparent;
   font-size: var(--fs-800);
-  cursor: pointer;
-  top: 0.5em;
+  top: 0;
   right: 1em;
-  padding: 0 0.5em;
-}
-.modal__close--button:hover,
-.modal__close--button:active,
-.modal__close--button:focus {
-  border: 1px solid var(--clr-neutral-900);
+  line-height: 1.5;
 }
 .overlay {
   position: fixed;
@@ -299,7 +293,6 @@ body {
 .even-columns {
   display: grid;
   grid-auto-flow: row;
-  gap: 1.5em;
 }
 /* intro section */
 .Intro {
@@ -380,7 +373,7 @@ body {
   /* modal style */
   .modal--header {
     max-width: 15ch;
-    margin: 0.4em auto;
+    margin: auto;
   }
 
   .even-columns {
